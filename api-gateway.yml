@@ -63,7 +63,7 @@ spring:
   datasource:
     url: jdbc:mysql://docker:3306/auth
     username: root
-    password: password
+    password: 
     driver-class: com.mysql.jdbc.Driver
   
   jpa:
@@ -83,11 +83,11 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://192.168.59.103:8761/eureka/
+      defaultZone: http://docker:8761/eureka/
       
 # The OAuth2 server definition that would be used to send the authorization requests to
 authserver:
-    hostname: 192.168.59.103
+    hostname: docker
     port: 8899
     contextPath: userauth
     
